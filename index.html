@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MathCalc | Calculadora Matemática</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon">π</div>
+
+            <div>
+                <h1>MathCalc</h1>
+                <p>Calculadora Matemática</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <section class="hero">
+
+            <h2>Calculadora de Matemática</h2>
+
+            <p>
+                Calcule rapidamente valores de trigonometria,
+                triângulos, áreas, perímetros e sólidos geométricos.
+            </p>
+
+        </section>
+
+
+        <!-- ABAS -->
+
+        <div class="tabs">
+
+            <button class="tab active" onclick="abrirAba('trigonometria')">
+                📐 Trigonometria
+            </button>
+
+            <button class="tab" onclick="abrirAba('triangulo')">
+                🔺 Triângulo
+            </button>
+
+            <button class="tab" onclick="abrirAba('areas')">
+                🔷 Áreas
+            </button>
+
+            <button class="tab" onclick="abrirAba('perimetros')">
+                📏 Perímetros
+            </button>
+
+            <button class="tab" onclick="abrirAba('volumes')">
+                📦 Volumes
+            </button>
+
+        </div>
+
+
+        <!-- ================= TRIGONOMETRIA ================= -->
+
+        <section id="trigonometria" class="conteudo-aba active">
+
+            <div class="section-title">
+
+                <h2>📐 Trigonometria</h2>
+
+                <p>
+                    Calcule seno, cosseno e tangente de um ângulo.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- SENO -->
+
+                <div class="card">
+
+                    <h3>Seno</h3>
+
+                    <label>Ângulo em graus</label>
+
+                    <input
+                        type="number"
+                        id="anguloSeno"
+                        placeholder="Digite o ângulo"
+                    >
+
+                    <button onclick="calcularSeno()">
+                        Calcular seno
+                    </button>
+
+                    <div class="resultado" id="resultadoSeno">
+                        Resultado aparecerá aqui
+                    </div>
+
+                </div>
+
+
+                <!-- COSSENO -->
+
+                <div class="card">
+
+                    <h3>Cosseno</h3>
+
+                    <label>Ângulo em graus</label>
+
+                    <input
+                        type="number"
+                        id="anguloCosseno"
+                        placeholder="Digite o ângulo"
+                    >
+
+                    <button onclick="calcularCosseno()">
+                        Calcular cosseno
+                    </button>
+
+                    <div class="resultado" id="resultadoCosseno">
+                        Resultado aparecerá aqui
+                    </div>
+
+                </div>
+
+
+                <!-- TANGENTE -->
+
+                <div class="card">
+
+                    <h3>Tangente</h3>
+
+                    <label>Ângulo em graus</label>
+
+                    <input
+                        type="number"
+                        id="anguloTangente"
+                        placeholder="Digite o ângulo"
+                    >
+
+                    <button onclick="calcularTangente()">
+                        Calcular tangente
+                    </button>
+
+                    <div class="resultado" id="resultadoTangente">
+                        Resultado aparecerá aqui
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRIÂNGULO ================= -->
+
+        <section id="triangulo" class="conteudo-aba">
+
+            <div class="section-title">
+
+                <h2>🔺 Triângulo Retângulo</h2>
+
+                <p>
+                    Utilize o Teorema de Pitágoras para calcular
+                    catetos e hipotenusa.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- HIPOTENUSA -->
+
+                <div class="card">
+
+                    <h3>Calcular Hipotenusa</h3>
+
+                    <label>Cateto 1</label>
+
+                    <input
+                        type="number"
+                        id="cateto1"
+                        placeholder="Digite o primeiro cateto"
+                    >
+
+                    <label>Cateto 2</label>
+
+                    <input
+                        type="number"
+                        id="cateto2"
+                        placeholder="Digite o segundo cateto"
+                    >
+
+                    <button onclick="calcularHipotenusa()">
+                        Calcular
+                    </button>
+
+                    <div class="resultado" id="resultadoHipotenusa">
+                        Resultado aparecerá aqui
+                    </div>
+
+                </div>
+
+
+                <!-- CATETO -->
+
+                <div class="card">
+
+                    <h3>Calcular Cateto</h3>
+
+                    <label>Hipotenusa</label>
+
+                    <input
+                        type="number"
+                        id="hipotenusa"
+                        placeholder="Digite a hipotenusa"
+                    >
+
+                    <label>Outro cateto</label>
+
+                    <input
+                        type="number"
+                        id="outroCateto"
+                        placeholder="Digite o outro cateto"
+                    >
+
+                    <button onclick="calcularCateto()">
+                        Calcular
+                    </button>
+
+                    <div class="resultado" id="resultadoCateto">
+                        Resultado aparecerá aqui
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ÁREAS ================= -->
+
+        <section id="areas" class="conteudo-aba">
+
+            <div class="section-title">
+
+                <h2>🔷 Cálculo de Áreas</h2>
+
+                <p>
+                    Calcule áreas de diferentes figuras geométricas.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- RETÂNGULO -->
+
+                <div class="card">
+
+                    <h3>Retângulo</h3>
+
+                    <input
+                        type="number"
+                        id="baseRetangulo"
+                        placeholder="Base"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaRetangulo"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="areaRetangulo()">
+                        Calcular área
+                    </button>
+
+                    <div class="resultado" id="resultadoRetangulo"></div>
+
+                </div>
+
+
+                <!-- TRIÂNGULO -->
+
+                <div class="card">
+
+                    <h3>Triângulo</h3>
+
+                    <input
+                        type="number"
+                        id="baseTriangulo"
+                        placeholder="Base"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaTriangulo"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="areaTriangulo()">
+                        Calcular área
+                    </button>
+
+                    <div class="resultado" id="resultadoAreaTriangulo"></div>
+
+                </div>
+
+
+                <!-- CÍRCULO -->
+
+                <div class="card">
+
+                    <h3>Círculo</h3>
+
+                    <input
+                        type="number"
+                        id="raioCirculo"
+                        placeholder="Raio"
+                    >
+
+                    <button onclick="areaCirculo()">
+                        Calcular área
+                    </button>
+
+                    <div class="resultado" id="resultadoCirculo"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PERÍMETROS ================= -->
+
+        <section id="perimetros" class="conteudo-aba">
+
+            <div class="section-title">
+
+                <h2>📏 Perímetros</h2>
+
+                <p>
+                    Calcule o comprimento total das figuras.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- QUADRADO -->
+
+                <div class="card">
+
+                    <h3>Quadrado</h3>
+
+                    <input
+                        type="number"
+                        id="ladoQuadrado"
+                        placeholder="Tamanho do lado"
+                    >
+
+                    <button onclick="perimetroQuadrado()">
+                        Calcular perímetro
+                    </button>
+
+                    <div class="resultado" id="resultadoQuadrado"></div>
+
+                </div>
+
+
+                <!-- RETÂNGULO -->
+
+                <div class="card">
+
+                    <h3>Retângulo</h3>
+
+                    <input
+                        type="number"
+                        id="basePerimetro"
+                        placeholder="Base"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaPerimetro"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="perimetroRetangulo()">
+                        Calcular perímetro
+                    </button>
+
+                    <div class="resultado" id="resultadoPerimetroRetangulo"></div>
+
+                </div>
+
+
+                <!-- CÍRCULO -->
+
+                <div class="card">
+
+                    <h3>Circunferência</h3>
+
+                    <input
+                        type="number"
+                        id="raioPerimetro"
+                        placeholder="Raio"
+                    >
+
+                    <button onclick="circunferencia()">
+                        Calcular
+                    </button>
+
+                    <div class="resultado" id="resultadoCircunferencia"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= VOLUMES ================= -->
+
+        <section id="volumes" class="conteudo-aba">
+
+            <div class="section-title">
+
+                <h2>📦 Sólidos Geométricos</h2>
+
+                <p>
+                    Calcule o volume de diferentes sólidos.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- CUBO -->
+
+                <div class="card">
+
+                    <h3>Cubo</h3>
+
+                    <input
+                        type="number"
+                        id="ladoCubo"
+                        placeholder="Tamanho do lado"
+                    >
+
+                    <button onclick="volumeCubo()">
+                        Calcular volume
+                    </button>
+
+                    <div class="resultado" id="resultadoCubo"></div>
+
+                </div>
+
+
+                <!-- PARALELEPÍPEDO -->
+
+                <div class="card">
+
+                    <h3>Paralelepípedo</h3>
+
+                    <input
+                        type="number"
+                        id="comprimentoParalelepipedo"
+                        placeholder="Comprimento"
+                    >
+
+                    <input
+                        type="number"
+                        id="larguraParalelepipedo"
+                        placeholder="Largura"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaParalelepipedo"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="volumeParalelepipedo()">
+                        Calcular volume
+                    </button>
+
+                    <div class="resultado" id="resultadoParalelepipedo"></div>
+
+                </div>
+
+
+                <!-- CILINDRO -->
+
+                <div class="card">
+
+                    <h3>Cilindro</h3>
+
+                    <input
+                        type="number"
+                        id="raioCilindro"
+                        placeholder="Raio"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaCilindro"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="volumeCilindro()">
+                        Calcular volume
+                    </button>
+
+                    <div class="resultado" id="resultadoCilindro"></div>
+
+                </div>
+
+
+                <!-- CONE -->
+
+                <div class="card">
+
+                    <h3>Cone</h3>
+
+                    <input
+                        type="number"
+                        id="raioCone"
+                        placeholder="Raio"
+                    >
+
+                    <input
+                        type="number"
+                        id="alturaCone"
+                        placeholder="Altura"
+                    >
+
+                    <button onclick="volumeCone()">
+                        Calcular volume
+                    </button>
+
+                    <div class="resultado" id="resultadoCone"></div>
+
+                </div>
+
+
+                <!-- ESFERA -->
+
+                <div class="card">
+
+                    <h3>Esfera</h3>
+
+                    <input
+                        type="number"
+                        id="raioEsfera"
+                        placeholder="Raio"
+                    >
+
+                    <button onclick="volumeEsfera()">
+                        Calcular volume
+                    </button>
+
+                    <div class="resultado" id="resultadoEsfera"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            MathCalc • Calculadora de Matemática
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
